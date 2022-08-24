@@ -144,8 +144,8 @@ pipeline {
                               if(changeSetId != null) {
                                     // DevOps Change Enable
                                     echo "Change set registration for ${changeSetId}"
-                                    //changeSetRegResult = snDevOpsConfigRegisterPipeline(changesetNumber:"${changeSetId}")
-                                    //echo "change set registration set result ${changeSetRegResult}"
+                                    changeSetRegResult = snDevOpsConfigRegisterPipeline(changesetNumber:"${changeSetId}")
+                                    echo "change set registration set result ${changeSetRegResult}"
                                     
                               } else {
                                     error "Change set was not created"
