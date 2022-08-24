@@ -306,7 +306,8 @@ pipeline {
                                     "setCloseCode": true,
                                     "attributes": {
                                           "category": "DevOps",
-                                          "priority": "3"
+                                          "priority": "3",
+                                          "assignment_group": "Change Management"
                                     }
                               }""")
                               /*
