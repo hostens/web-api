@@ -311,7 +311,11 @@ pipeline {
                               echo "DevOps Change - trigger change request"
                               //changereq = snDevOpsChange()
                               //echo "Change Record: " + changereq
-                              
+                              snDevOpsChange(
+                                    applicationName: "${appName}",
+                                    snapshotName: "${snapshotName}"
+                              )
+                              /*
                               
                               snDevOpsChange(changeRequestDetails: """{
                                     "applicationName": "${appName}",
@@ -325,6 +329,7 @@ pipeline {
                                           }
                                     }
                               }""")
+                              */
                               /*
                               snDevOpsChange(changeRequestDetails: """{
                                     "setCloseCode": false,
