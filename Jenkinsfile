@@ -314,6 +314,8 @@ pipeline {
                               
                               
                               snDevOpsChange(changeRequestDetails: """{
+                                    "applicationName": "${appName}",
+                                    "snapshotName": "${snapshotName}"
                                     "setCloseCode": true,
                                     "attributes": {
                                           "category": "DevOps",
