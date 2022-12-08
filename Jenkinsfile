@@ -313,7 +313,15 @@ pipeline {
                               //echo "Change Record: " + changereq
                               snDevOpsChange(
                                     applicationName: "${appName}",
-                                    snapshotName: "${snapshotName}"
+                                    snapshotName: "${snapshotName}",
+                                    changeRequestDetails: """{
+                                          "setCloseCode": true,
+                                          "attributes": {
+                                                "category": "DevOps",
+                                                "assignment_group": "Change Management",
+                                                "priority": 3
+                                          }
+                                    }"""
                               )
                               /*
                               
