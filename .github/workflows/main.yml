@@ -17,8 +17,6 @@ jobs:
         devops-integration-user-name: ${{ secrets.SNOW_USER }}
         # Devops Integration User Password
         devops-integration-user-password: ${{ secrets.SNOW_PASSWORD }}
-        # Devops Integration Token
-        devops-integration-token: # optional
         # Orchestration Tool Id
         tool-id: ${{ secrets.SNOW_TOOL_ID }}
         # Display Name of the Job
