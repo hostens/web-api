@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: ServiceNow DevOps Change Automation
-      uses: ServiceNow/servicenow-devops-change@v6.2.0
+      uses: ServiceNow/servicenow-devops-change@v4.0.0
       with:
         instance-url: ${{ secrets.SNOW_INSTANCE }}
         devops-integration-user-name: ${{ secrets.SNOW_USER }}
