@@ -1,0 +1,29 @@
+on:
+  push:
+
+name: github-app-test
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: ServiceNow DevOps Change Automation
+      uses: ServiceNow/servicenow-devops-change@v6.1.0
+      with:
+        # ServiceNow Instance URL
+        instance-url: ${{ secrets.SNOW_INSTANCE }}
+        # Devops Integration User Name
+        devops-integration-user-name: ${{ secrets.SNOW_USER }}
+        # Devops Integration User Password
+        devops-integration-user-password: ${{ secrets.SNOW_PASSWORD }}
+        # Devops Integration Token
+        devops-integration-token: # optional
+        # Orchestration Tool Id
+        tool-id: ${{ secrets.SNOW_TOOL_ID }}
+        # Display Name of the Job
+        job-name: Deploy to Production
+        # Github Context
+        context-github: ${{ toJSON(github) }}
+        change-request: '{"setCloseCode": true, "attributes": {"category": "DevOps", "short_description": "Automated Software Deployment using Github!!!", "description": "Automated Software Deployment!!!!"}}'
+        
